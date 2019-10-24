@@ -185,6 +185,11 @@ function github() {
   open $giturl
 }
 
+function space_percent(){
+   free -t | awk 'FNR == 2 {print "Current Memory Utilization is : " $3/$2*100}'
+   top -b -n1 | grep ^%Cpu | awk '{cpu+=$9}END{print "Current CPU Utilization is : " 100-cpu/NR}'
+}
+
       ###############################
       ##         Aliases           ##
       ###############################

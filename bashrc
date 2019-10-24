@@ -168,7 +168,7 @@ function scan(){
 function git_sign(){
    git config user.name "firstname lastname"
    git config user.email "firstname.lastname@mail.com"
-   git config --global user.signingkey <GPG KEY>
+   git config --global user.signingkey GPG KEY
    git config --local commit.gpgsign true
 }
 function github() {
@@ -199,7 +199,7 @@ alias starwars="telnet towel.blinkenlights.nl"
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias root='sudo -i'
 alias server="ssh ${USER}@am-i-an.unusualperson.com"
-alias story="'ssh root@tell-me-a-story.onthewifi.com'"
+alias story="ssh root@tell-me-a-story.onthewifi.com"
 alias gruy="ssh ${USER}@gruyere01c.int94.cvf"
 alias con="ssh ${USER}@gruyere01c.int94.cvf -t \"con $1\""
 alias share-screen="/home/${USER}/Documents/tools/usr/bin/vnc_share"

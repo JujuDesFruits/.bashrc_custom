@@ -185,8 +185,8 @@ function github() {
 }
 
 function space_percent(){
-   free -t | awk 'FNR == 2 {print "Current Memory Utilization is : " $3/$2*100}'
-   top -b -n1 | grep ^%Cpu | awk '{cpu+=$9}END{print "Current CPU Utilization is : " 100-cpu/NR}'
+   free -t | awk 'FNR == 2 {print "Current Memory Utilization is : " $3/$2*100 " %" }'
+   grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print "Current CPU Utilisation is: " usage " %"}'
 }
 
       ###############################

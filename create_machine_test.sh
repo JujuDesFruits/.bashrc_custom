@@ -14,7 +14,7 @@ while test $STATUS_ANSWER -ne 0 ; do
 			STATUS_ANSWER=2
 		fi
 		if test "${ANSWER}" = "ubuntu" ; then
-			OS=ubuntu/trusty64
+			OS=ubuntu/bionic64
 			STATUS_ANSWER=2
 		fi
 		if test "${ANSWER}" = "centos" ; then
